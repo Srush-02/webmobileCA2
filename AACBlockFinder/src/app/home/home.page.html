@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      AAC Block
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+    <ion-button expand="full" (click)="getLocation()">Find Nearby AAC Blocks Company</ion-button>
+
+  <ion-button expand="full" (click)="takePhoto()">Take Receipt Photo</ion-button>
+
+  <div *ngIf="location">
+    <p>Latitude: {{ location.latitude }}</p>
+    <p>Longitude: {{ location.longitude }}</p>
+  </div>
+    <img *ngIf="photo" [src]="photo" width="200">
+
+
+
+</ion-content>
