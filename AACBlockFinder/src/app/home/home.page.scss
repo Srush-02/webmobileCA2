@@ -25,3 +25,19 @@
 #container a {
   text-decoration: none;
 }
+
+.custom-button {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+ion-toolbar {
+  --background: #f1f3f6; /* Darker blue for header */
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ACC Blocks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Standard ACC Block</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Size: 600x200x100 mm<br />
+      Weight: 8kg<br />
+      Application: Partition Walls
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Jumbo ACC Block</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Size: 600x300x150 mm<br />
+      Weight: 15kg<br />
+      Application: Load Bearing
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" (click)="takeProductPhoto()">Take Product Photo</ion-button>
+  <div *ngIf="photo">
+    <ion-img [src]="photo"></ion-img>
+  </div>
+     <ion-button expand="block" (click)="goToLocation()">Find Us</ion-button>
+
+</ion-content>
