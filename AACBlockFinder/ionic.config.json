@@ -1,7 +1,0 @@
-{
-  "name": "AACBlockFinder",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
