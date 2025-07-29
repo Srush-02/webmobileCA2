@@ -1,0 +1,7 @@
+{
+  "name": "Castlite",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
