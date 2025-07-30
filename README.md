@@ -26,9 +26,10 @@ Tab 3: About CASTLITE AAC Block Features
 For icon and splash : added png in /resources/splash.png and /resources/icon.png with 512x512 and 2732x2732 size respectively.
 It has a personalized splash screen and adaptive icons on Android.
 
-## Technology: 
+## Technology and platforms: 
 Angular and ionic framework
 Capacitor
+Android
 ## Plugins :
 Camera Plugin 
 Geolocation Plugin
