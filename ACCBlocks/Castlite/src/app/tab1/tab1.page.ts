@@ -8,10 +8,11 @@ import { Geolocation } from '@capacitor/geolocation';
   standalone: false,
 })
 export class Tab1Page {
-  locationData: string = '';
-  locationLink: string = '';
-  castliteLat = 12.9715987;
-  castliteLng = 77.5945627;
+  locationData: string | null = null;
+locationLink: string | null = null;
+
+  castliteLat = 19.7802122;
+  castliteLng = 72.784814;
   constructor() {}
 
   getCastliteLocation() {
@@ -19,15 +20,27 @@ export class Tab1Page {
     this.locationLink = `https://www.google.com/maps?q=${this.castliteLat},${this.castliteLng}`;
   }
 
-  async getUserLocation() {
-    try {
-      const position = await Geolocation.getCurrentPosition();
-      const { latitude, longitude } = position.coords;
-      this.locationData = `Your Location: Latitude: ${latitude.toFixed(5)}, Longitude: ${longitude.toFixed(5)}`;
-      this.locationLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
-    } catch (error) {
-      this.locationData = 'Error getting your location';
-    }
+
+
+ getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        this.locationData = `${lat}, ${lng}`;
+        this.locationLink = `https://www.google.com/maps?q=${lat},${lng}`;
+      },
+      (error) => {
+        console.error('Error getting location', error);
+        this.locationData = 'Unable to retrieve location.';
+        this.locationLink = null;
+      }
+    );
+  } else {
+    this.locationData = 'Geolocation is not supported by this browser.';
+    this.locationLink = null;
   }
+}
 
 }

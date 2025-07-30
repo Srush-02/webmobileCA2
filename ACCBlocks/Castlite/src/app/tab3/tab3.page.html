@@ -1,66 +1,35 @@
+
 <ion-header [translucent]="true">
  
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content fullscreen="true" class="ion-padding">
+    <div class="inner-wrapper">
 
-  <ion-text color="primary">
-    <h2 class="ion-text-center">About Us</h2>
-  </ion-text>
-
-  <p class="ion-text-justify">
-    <strong>STLITE AAC Blocks</strong> are a next-generation, lightweight, and high-performance building material, designed to meet modern construction demands with sustainability and strength.
-  </p>
-
+  <section class="hero-banner">
+    <h1>CASTLITE AAC Blocks</h1>
+    <p>Next-generation, lightweight, and high-performance building materials designed for modern sustainable construction.</p>
+  </section>
   <ion-grid>
     <ion-row>
-      <ion-col size="12" size-md="6">
+      <ion-col size="12" size-md="6" *ngFor="let feature of features">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Eco-Friendly</ion-card-title>
+            <ion-card-title>{{ feature.title }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            Produced using fly ash and an advanced manufacturing process, STLITE AAC blocks are ideal for green buildings.
-          </ion-card-content>
+        {{ feature.description }}          </ion-card-content>
         </ion-card>
       </ion-col>
 
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Lightweight & Strong</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Three times lighter than traditional red bricks, yet stronger and easier to handle, reducing construction load and time.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Customizable</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Blocks can be tailored in size and density — down to 500 kg/m³ — to suit the needs of any project.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="12" size-md="6">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Durable & Insulating</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            High thermal insulation and durability make STLITE AAC Blocks ideal for long-lasting and energy-efficient buildings.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
     </ion-row>
   </ion-grid>
+</div>
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +1 111 567 8900</p>
+    <p><strong>Email:</strong> info@castliteaacblocks.com</p>
+  </div>
 
 </ion-content>
 
